@@ -85,16 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
     cardsContainer.addEventListener("click", function (event) {
     const card = event.target.closest(".card-restaurant");
 
-    if (!card) return; // Якщо натиснуто не на картку, нічого не робити.
+    if (!card) return;
 
-    event.preventDefault(); // Запобігти переходу за посиланням.
+    event.preventDefault();
 
-    if (!localStorage.getItem("login")) { // Якщо користувач не авторизований.
-        modalAuth.style.display = "flex"; // Відкрити модальне вікно.
-        document.body.style.overflow = "hidden"; // Заборонити прокручування сторінки.
+    if (!localStorage.getItem("login")) {
+        modalAuth.style.display = "flex";
+        document.body.style.overflow = "hidden";
     }
 	if (localStorage.getItem("login")) {
-    window.location.href = "restaurant.html"; // Вказати потрібний URL.
+    window.location.href = "restaurant.html";
 }
 	
 });
